@@ -1,0 +1,64 @@
+extends ./layout/_header.jade 
+block content
+  include ./components/_navigation.jade
+  include ./mixins/devcenter-maplist.jade
+  // 小导航
+  div.sub-nav-title 
+    img.home-logo(src="../images/mapcenter/home-logo.png")
+    span 首页
+    img.double-arrow(src="../images/mapcenter/double-arrow.png")
+    span.sub-title 开发中心   
+  // 页面banner图
+  div.page-banner
+    img(src="../images/devcenter/hands-way-guide-tourist.png")
+    div.describe
+      h2 开发中心
+      p 做更好的地图，简单方便，做更好的地图，简单方便
+  div#devcenter
+    
+    article
+      // 菜单栏
+      section.left
+        ul
+          - var list = ['地图示例','地图控件示例','覆盖物实例','信息窗口示例','右键菜单示例','鼠标示例','叠加层示例','事件示例','GPS功能','全景图示例','个性化地图','检索示例','公交检索接口'];
+          - for(var i = 0; i < list.length ; i++){
+            li
+              - var tmpClass = "list-icon list-icon-" + i
+              div(class=tmpClass)
+              span= list[i]
+              .arrow-top
+          - }
+      section.right
+        .search
+          .search-box
+            input
+            .search-box-icon
+        .content
+          // 右侧分页面导航栏
+          .top
+            ul
+              -var navlist=['新手引导','实例代码','文档说明']
+              -for (var j=0;j<navlist.length;j++){
+                li
+                  div(class='top-icon top-icon-'+j)
+                  h4= navlist[j]
+              -}
+          // 右侧分页面小方块
+          .bottom
+            ul
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+              +maplist
+
+    // 脚注
+    include ./layout/_footer.jade
+
+  script(src='../scripts/devcenter.js')  

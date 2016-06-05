@@ -1,0 +1,155 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' type='text/css' href='../styles/index.css')
+
+  body#home
+
+    // 导航栏
+    nav
+      div.logo
+        img
+      span.title 武汉市公安局云GIS平台
+      ul
+        li 
+          a(href="./home.html") 首页
+        li 
+          a(href="./mapcenter.html#mymappage") 地图
+        li 
+          a(href="./datacenter.html#datasetpage") 数据
+        li 
+          a(href="./operacenter.html#mapmanagerpage") 运维
+        li 
+          a(href="./devcenter.html") 开发
+        li 
+          a(href="./about.html") 联系我们
+
+    // 视频
+    header
+      div.movie
+        video(src="../videos/earth.mp4" loop autoplay width="100%")
+          img(src="../images/home/earthimg.jpg")
+        div.movie-content
+          p 让企业更加快速、灵活地运用大数据
+          p 联图时空是中国大数据行业运营商，是中国大数据可视化的领导者，
+          p 联图时空专注于提供更佳灵活、快速的大数据分析与数据可视化，拥有中国顶级的大数据运营服务。
+          div.movie-button
+            span 与联图时空一起运营大数据
+
+    // 内容
+    div#content
+      ul.menu
+        li.menu-list
+          img(src="../images/home/mapcenter.png")
+          h1 地图中心
+          p 说明文本信息说明文本信息说明文本信息说明文本信息
+          span 了解更多
+        li.menu-list
+          img(src="../images/home/datacenter.png")
+          h1 数据中心
+          p 说明文本信息说明文本信息说明文本信息说明文本信息
+          span 了解更多
+        li.menu-list
+          img(src="../images/home/operacenter.png")
+          h1 运维中心
+          p 说明文本信息说明文本信息说明文本信息说明文本信息
+          span 了解更多
+        li.menu-list
+          img(src="../images/home/devcenter.png")
+          h1 开发中心
+          p 说明文本信息说明文本信息说明文本信息说明文本信息
+          span 了解更多
+
+
+    // banner图切换
+    div#banner
+      div.split
+        div.line
+        div.title 
+          h1 平台应用
+        div.description 数字衡阳市县一体化应用中心由在线应用模板、行业应用支撑、智能地图应用、Office集成应用以及Web Mapping API等几部分组成
+      div
+        div.img-content
+          div.img-file
+            img(src="../images/home/banner/smartmap.png")
+          div.img-text
+            h1 智能地图
+            p 智能地图是根据用户数据特征，快速生成的专题地图，目前实现了线上二维环境的智能制图，三维场景的数据表达，以及对多种数据源的浏览支持
+            ul
+              li 智能识别数据中空间位置信息
+              li 智能筛选和分析数据
+              li 提供多种专业制图模板
+              li 多参考系支持 
+            span 了解更多
+        div.img-content(style="display:none")
+          div.img-file
+            img(src="../images/home/banner/tempapplication.png")
+          div.img-text
+            h1 模版应用
+            p 智能地图是根据用户数据特征，快速生成的专题地图，目前实现了线上二维环境的智能制图，三维场景的数据表达，以及对多种数据源的浏览支持
+            ul
+              li 智能识别数据中空间位置信息 
+              li 智能筛选和分析数据
+              li 提供多种专业制图模板
+              li 多参考系支持
+            span 了解更多
+        div.img-content(style="display:none")
+          div.img-file
+            img(src="../images/home/banner/datainto.png")
+          div.img-text
+            h1 数据接入
+            p 智能地图是根据用户数据特征，快速生成的专题地图，目前实现了线上二维环境的智能制图，三维场景的数据表达，以及对多种数据源的浏览支持
+            ul
+              li 智能识别数据中空间位置信息
+              li 智能筛选和分析数据
+              li 提供多种专业制图模板
+              li 多参考系支持
+            span 了解更多
+        div.img-content(style="display:none")
+          div.img-file
+            img(src="../images/home/banner/operabanner.png")
+          div.img-text
+            h1 运营维护
+            p 智能地图是根据用户数据特征，快速生成的专题地图，目前实现了线上二维环境的智能制图，三维场景的数据表达，以及对多种数据源的浏览支持
+            ul
+              li 智能识别数据中空间位置信息
+              li 智能筛选和分析数据
+              li 提供多种专业制图模板
+              li 多参考系支持
+            span 了解更多
+        div.img-content(style="display:none")
+          div.img-file
+            img(src="../images/home/banner/softdev.png")
+          div.img-text
+            h1 软件开发
+            p 智能地图是根据用户数据特征，快速生成的专题地图，目前实现了线上二维环境的智能制图，三维场景的数据表达，以及对多种数据源的浏览支持
+            ul
+              li 智能识别数据中空间位置信息
+              li 智能筛选和分析数据
+              li 提供多种专业制图模板
+              li 多参考系支持
+            span 了解更多
+                         
+      div.img-menu
+        ul
+          li.clicked 
+            img(src="../images/home/zndtlogo.png")
+            span 智能地图
+          li 
+            img(src="../images/home/mbyylogo.png")
+            span 模版应用
+          li 
+            img(src="../images/home/sjjrlogo.png")
+            span 数据接入
+          li 
+            img(src="../images/home/yywhlogo.png")
+            span 运营维护
+          li 
+            img(src="../images/home/rjkflogo.png")
+            span 软件开发
+
+    include ./layout/_bigfooter.jade
+    script(src='../scripts/common.js')
+    script(src='../scripts/home.js')
+

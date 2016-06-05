@@ -1,0 +1,28 @@
+// 页面菜单＋搜索
+div.pagemenu-search
+    if page.pagename == 'mapcenter'
+        span.onemenu#newmap
+          img(src="../images/mapcenter/zuixinditu.png")
+          span  最新地图
+        span.onemenu#mymap
+          img(src="../images/mapcenter/wodeditu.png")
+          span  我的地图
+        span.onemenu#mapfactory
+          img(src="../images/mapcenter/ditugongchang.png")
+          span  地图工厂
+    if page.pagename == 'datacenter'
+        span.onemenu#dataset
+          img(src="../images/datacenter/shujuji.png")
+          span  数据集
+        span.onemenu#personspace
+          img(src="../images/datacenter/gerenkongjian.png")
+          span  个人空间
+        span.onemenu#toolset
+          img(src="../images/datacenter/gongjuji.png")
+          span  工具集
+    if page.pagename == 'operacenter'
+    
+    span.search-box
+        div.search-input
+            input(type="text")
+        div.search-button 查询

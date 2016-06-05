@@ -1,0 +1,35 @@
+@import "../components/_navigation.scss";
+.sub-nav-title {
+  width: 100%;
+  height: 40px;
+  background-color: #f8f8f8;
+  font: 12px/40px arial;
+  img {
+    padding: 0 8px;
+  }
+}
+
+.page-banner {
+  width: 100%;
+  height: 252px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .describe{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    top: 70px;
+    left: 50px;
+    color: #fff;
+    line-height: 35px;
+    h2{
+      font-size: 25px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+}

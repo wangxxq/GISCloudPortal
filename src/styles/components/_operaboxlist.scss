@@ -1,0 +1,272 @@
+
+// 单个地图列表样式
+li.opera-map-list {
+  width: 248px;
+  height: 100%;
+  float: left;
+  margin: 10px 28px;
+  font-size: 15px;
+  position: relative;
+  text-align: left;
+  border: 1px solid #b2b2b2;
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  .map-status-menu{
+    width:248px;
+    line-height: 35px;
+    background-color: #f5f6fa;
+    span{
+      margin: 0px 15px;
+      color: #b2b2b2;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    img{
+      width: 20px;
+      height: 20px;
+      margin: 7px;
+      float:right;
+      cursor: pointer;
+    }
+    .clicked{
+      color:#272e40;
+    }
+  }
+  div.map-graph-echarts {
+    width: 248px;
+    height: 145px;
+  }
+  .map-data{
+    width:248px;
+    height: 35px;
+    font-size: 13px;
+    .visitnum {
+      height: 35px;
+      float: left;
+      img{
+        width: 20px;
+        height: 20px;
+        margin: 7px;
+        vertical-align : middle;
+      }
+      span {
+        vertical-align : middle;
+      }
+    }
+    .cross-light{
+      float: right;
+      line-height: 35px;
+      margin-right: 9px;
+      .circle-green{
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        background-color: $green;
+        margin: 10px 2px;
+        vertical-align: middle;
+        float:left;
+      }
+      .circle-yellow{
+        width: 14px;
+        height: 14px;
+        border-radius: 6px;
+        background-color: $yellow;
+        margin: 10px 2px;
+        vertical-align: middle;
+        float:left;
+      }
+      .circle-red{
+        width: 14px;
+        height: 14px;
+        border-radius: 6px;
+        background-color: $red;
+        margin: 10px 2px;
+        vertical-align: middle;
+        float:left;
+      }
+      span{
+        line-height: 20px;
+        margin-left: 2px;
+        vertical-align: middle;
+      }
+    }
+
+  }
+  h2{
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+    line-height: 2em;
+    cursor: pointer;
+  }
+  p {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .map-info {
+    width: 248px;
+    height: 35px;
+    font-size: 13px;
+    .map-name {
+      height: 35px;
+      float: left;
+      img{
+        width: 20px;
+        height: 20px;
+        margin: 7px;
+        vertical-align : middle;
+      }
+      span {
+        vertical-align : middle;
+      }
+    }
+    .map-date {
+      float: right;
+      line-height: 20px;
+      margin: 7px;
+    }
+
+  }
+
+}
+
+// 单个地图列表样式
+li.opera-sys-list {
+  width: 348px;
+  height: 100%;
+  float: left;
+  margin: 10px 30px;
+  position: relative;
+  font-size: 15px;
+  text-align: left;
+  color: $font_gray;
+  &:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  ul.sys-status-menu{
+    width:349px;
+    line-height: 36px;
+    height: 36px;
+    li{
+      width: 115px;
+      line-height: 35px;
+      color:$base_black;
+      margin-top: 0px;
+      border-right:  1px solid $border_gray;
+      border-bottom:  1px solid $border_gray;
+      border-top:  1px solid $border_gray;
+      background-color: $base_gray;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      float: left;
+      cursor: pointer;
+      text-align: center;
+      span{
+        vertical-align: middle;
+      }
+    }
+    li:first-child{
+      border-left:  1px solid $border_gray;
+    }
+    .clicked{
+      line-height: 36px;
+      background-color: $base_white;
+      border-bottom:  none;
+      margin-top: -1px;
+    }
+  }
+  .sys-data{
+    width:347px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    border-left:  1px solid $border_gray;
+    border-right:  1px solid $border_gray;
+    .idnumber {
+      float: left;
+      margin-left: 7px;
+      span {
+        vertical-align : middle;
+      }
+    }
+    img{
+      width: 20px;
+      height: 20px;
+      margin: 7px;
+      vertical-align : middle;
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .xuniji-graph-echarts{
+    width:347px;
+    height: 150px;
+    border-left:  1px solid $border_gray;
+    border-right:  1px solid $border_gray;
+  }
+  .sys-info{
+    width:347px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    border-left:  1px solid $border_gray;
+    border-right:  1px solid $border_gray;
+    span{
+      vertical-align : middle;
+    }
+    span:nth-child(odd){
+      margin-left: 8px;
+    }
+    span:nth-child(even){
+      margin-right: 15px;
+    }
+  }
+  ul.cross-light{
+    width:347px;
+    height: 40px;
+    border-left:  1px solid $border_gray;
+    border-right:  1px solid $border_gray;
+    border-bottom:  1px solid $border_gray;
+    line-height: 40px;
+    li{
+      float: left;
+      width: 115px;
+      .circle-green{
+        width: 5px;
+        height: 22px;
+        margin: 9px 10px;
+        background-color: $green;
+        float: left;
+        vertical-align: baseline;
+      }
+      .circle-yellow{
+        width: 5px;
+        height: 22px;
+        margin: 9px 10px;
+        background-color: $yellow;
+        float: left;
+        vertical-align: baseline;
+      }
+      .circle-red{
+        width: 5px;
+        height: 22px;
+        margin: 9px 10px;
+        background-color: $red;
+        float: left;
+        vertical-align: baseline;
+      }
+      span{
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+

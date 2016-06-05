@@ -1,0 +1,193 @@
+@import "../layout/_header.scss";
+@import "../components/_sidebar.scss";
+@import "../layout/_footer.scss";
+@import "../components/_mapboxlist.scss"; // 单个地图列表样式
+@import "../components/_pagemenu-search.scss";
+.map-factory,.map-mymap {
+  width: 1280px;
+  height: 1000px;
+  overflow: hidden;
+  // display: none;
+}
+
+.right-content-template {
+  z-index: 0;
+  float: left;
+  width: 1200px;
+  height: 1000px;
+  .top-info {
+    width: 1170px;
+    margin: 10px 0 10px 30px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 35px;
+    .switch-menu {
+      display: inline-block;
+      width: 234px;
+      border: 1px solid #000;
+      border-radius: 20px;
+      background-color: #303030;
+      color: #fff;
+      span {
+        display: inline-block;
+        padding: 0 10px;
+        cursor: pointer;
+        &:first-child {
+          border-right: 1px solid transparent;
+        }
+        &:last-child {
+          border-left: 1px solid transparent;
+        }
+      }
+      .clickfirst {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #303030;
+        border-right: 1px solid #000;
+      }
+      .clicksecond {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #303030;
+        border-left: 1px solid #000;
+      }
+    }
+  }
+  // 地图模版
+  .map-template {
+    width: 1170px;
+    margin: 10px 0 10px 30px;
+    overflow: hidden;
+    font-size: 15px;
+    ul.map-box {
+      width: 1170px;
+      height: 250px;
+    }
+  }
+  // 正在制作的地图
+  .map-making {
+    width: 1170px;
+    margin: 10px 0 10px 30px;
+    overflow: hidden;
+    font-size: 15px;
+    ul.map-box {
+      width: 1170px;
+      height: 250px;
+    }
+  }
+}
+
+.right-content-highlevel {
+  z-index: 0;
+  float: left;
+  width: 1200px;
+  height: 800px;
+  display: none;
+  .map-choose-service {
+    width: 1170px;
+    margin-left: 10px;
+    height: 160px;
+    border-bottom: 1px solid #dfdfdf;
+    div {
+      display: inline-block;
+      position: relative;
+    }
+    img {
+      width: 160px;
+      height: 130px;
+      margin: 15px 20px;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      top: 106px;
+      left: 40px;
+      font-size: 23px;
+    }
+    div.mapservice span {
+      left: 55px;
+    }
+  }
+  // 正在制作的地图
+  .map-making {
+    width: 1170px;
+    margin: 10px 0 10px 30px;
+    overflow: hidden;
+    font-size: 15px;
+    ul.map-box {
+      width: 1170px;
+      height: 250px;
+    }
+  }
+}
+
+// 地图排序
+.sort-menu {
+  float: right;
+  line-height: 40px;
+  color: #b3b5b4;
+  font-size: 16px;
+  span {
+    background: url(../images/mapcenter/paixu.png) no-repeat 70px 0;
+    margin: 0 20px;
+    padding: 0 10px;
+    line-height: 40px;
+    cursor: pointer;
+    &:last-child {
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+// 地图模版logo样式
+.template-logo {
+  img,
+  span {
+    vertical-align: middle;
+  }
+  img {
+    margin-right: 8px;
+  }
+}
+
+// 分页样式
+ul.map-pages {
+  height: 30px;
+  width: 285px;
+  float: right;
+  font-size: 13px;
+  color: #a7a7a7;
+  border: 1px solid #a7a7a7;
+  li.map-pagelist {
+    float: left;
+    line-height: 30px;
+    padding: 0 10px;
+    border-right: 1px solid #a7a7a7;
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+}
+
+// 我的地图
+.map-newmap {
+  display: none;
+  width: 1280px;
+  height: 600px;
+  div.sort-menu-box {
+    width: 1280px;
+    height: 40px;
+  }
+  ul.map-box {
+    width: 1200px;
+    margin-left: 110px;
+    overflow: hidden;
+  }
+  .left-menu{
+    height: 650px !important;
+  }
+}

@@ -1,0 +1,353 @@
+// 地图闪光
+#yikupulseplaceholder{
+  position: absolute;
+  width: 470px;
+  height: 250px;
+  top: 0;
+  left: 700px;
+
+  .pulse {
+    background: #ffc506;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    margin: 11px 0px 0px -12px;
+    z-index: 2; 
+  }
+  .pulse:after {
+    content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -10px 0 0 -15px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    box-shadow: 0 0 8px 1px #ffc506 inset; 
+  }
+  @keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0; }
+    80% {
+        opacity: 1; }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0; } 
+  }
+}
+
+
+
+#datacenter-person-space{
+  display: none;
+  width: 1280px;
+  height: 830px;
+  .sum-info{
+    height: 200px;
+    background: url(../images/datacenter/beijing.png) no-repeat center;
+    background-size: 100%;
+    margin-top: 10px;
+    ul{
+      overflow: hidden;
+      position: relative;
+      li{
+        float: left;
+        height: 120px;
+        background-color: rgba(255,255,255,0.5);
+        margin: 0 15px;
+        width: 225px;
+        margin-top: 35px;
+        border-radius: 5px;
+      }
+      li:first-child{
+        width: 450px;
+        text-align: center;
+        line-height: 120px;
+        background-color: rgba(0,0,0,0);
+        span{  
+          font-size: 18px;
+          color: #b7b8ba;
+          font-weight:100;
+          em{
+            color: #3792cf;
+            font-size: 36px;
+          }
+        }
+      }
+
+      li:nth-child(2),li:nth-child(3){
+        text-align: center;
+        font-size: 13px;
+        img{
+          margin-top: 20px;
+        }
+      }
+      li:nth-child(3){
+        img{
+          margin-top: 15px;
+        }
+      }
+      li:last-child{
+        width: 250px;
+        background-color: rgba(0,0,0,0);
+        div{
+          margin: 10px 0;
+          padding: 3px 20px;
+          height: 40px;
+          background-color: #fff;
+          img{
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom:-8px;
+          }
+          span{
+            line-height: 40px;
+            em{
+              color: #f7babc;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .top-menu{
+    width: 100%;
+    height: 40px;
+    margin: 0 0 10px 0;
+    line-height: 28px;
+    color: #737374;
+    ul{
+      li{
+        width: 75px;
+        height: 28px;
+        float: left;
+        margin: 0 10px;
+        background-color: #f1f5f5;
+        border: 1px solid #d5d6d7;
+        border-radius: 5px;
+        text-align: center;
+        img{
+          margin-top: 3px;
+          margin-bottom: -5px;
+          margin-right: 5px;
+        }
+      }
+    }
+    input{
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+  }
+  .file-table{
+    width: 1260px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    tr{
+      border-top: 1px solid #e6e7e8;
+      border-bottom: 1px solid #e6e7e8;
+      color: #575859;
+      height: 50px;
+      &:hover{
+        background-color: #e3f7ff;
+      }
+      td:nth-child(1){
+        width: 40px;
+      }
+      td:nth-child(2){
+        width: 220px;
+      }
+      td:nth-child(3){
+        width: auto;
+      }
+      td:nth-child(4){
+        width: 22px;
+      }
+    }
+  }
+}
+
+
+
+// 工具集
+#datacenter-tool-set{
+  // display: none;
+  width: 1280px;
+  height: 830px;
+  .tool-content{
+    width: 1200px;
+    height: 830px;
+    margin-left: 110px;
+    position: relative;
+
+    .tool-list{
+      float: left;
+      width: 320px;
+      height: 100px;
+      margin: 20px 30px;
+      background-color: #202b3e;
+      border-radius: 5px;
+      .left{
+        width: 60px;
+        height: 60px; 
+        margin-top: 20px;
+        margin-left: 10px;
+        float: left;
+        img{
+          width:100%;
+          height: 100%;
+        }
+      }
+      .right{
+        width: 230px;
+        height: 73px;
+        float: left;
+        margin-top: 15px;
+        margin-left: 10px;
+        color: #fff;
+        overflow: hidden;
+        h3{
+          font-size: 18px;
+        }
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// 数据集
+#datacenter-data-set{
+  width: 1280px;
+  height: 830px;
+
+  .create-time{
+    width: 80px;
+    height: 30px;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    background-color: red;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+    color: #9ca0a1;
+    background: url(../images/mapcenter/paixu.png) no-repeat 60px 5px;
+  }
+  .data-content{
+    width: 1200px;
+    height: 830px;
+    margin-left: 110px;
+    position: relative;
+    overflow: hidden;
+    .data-list{
+      float: left;
+      width: 320px;
+      height: 350px;
+      margin: 20px 30px;
+      border: 1px solid #f0f1f2;
+      .topimg{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+      .centerinfo{
+        width: 90%;
+        height: 127px;
+        margin-left: 5%;
+        border-bottom: 1px solid #f2f3f4;
+        font-size: 15px;
+        line-height: 23px;
+        h3{
+          font-size: 20px;
+        }
+      }
+      .bottom{
+        overflow: hidden;
+        height: 30px;
+        line-height: 30px;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 14px;
+        section.user{
+          background: url(../images/datacenter/jianliren.png) no-repeat left;
+          float: left;
+          padding-left: 20px;
+        }
+        section.time{
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+// 大图上的数字
+#dataResourceTotalDiv {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background-color: rgba(6, 17, 37, 0.7);
+  width: 490px;
+  height: 170px;
+  color: #FFF;
+  text-align: center;
+  padding: 30px 30px; 
+  #titleFordataRresourceTotalDiv {
+    font-size: 1.5em;
+    margin-bottom: 20px; }
+  .clearfix::after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden; }
+  #nineInfoDiv {
+      font-family: "Microsoft YaHei";
+      color: #FFF; }
+  #nineInfoDivOne {
+      float: left;
+      text-align: left; }
+  #nineInfoDivTwo {
+      float: right;
+      text-align: left; }
+  #nineInfoDiv p {
+      font-size: 0.95em;
+      margin: 0px;
+      padding: 8px 0; }
+  #nineInfoDivOne span, #nineInfoDivTwo span {
+      font-size: 1.5em; }
+  #include {
+      text-align: left;
+      font-size: 0.95em; }
+  .numberPlaceHolder {
+      background-color: #0880da;
+      height: 36px;
+      width: 30px;
+      float: left;
+      margin-right: 1px;
+      line-height: 36px; }
+  .numberPlaceHolder1 {
+      background-color: #0880da;
+      height: 36px;
+      width: 30px;
+      float: left;
+      margin-right: 5px;
+      line-height: 36px; }
+  #numberDisplayDiv {
+      margin: 0 auto 30px;
+      text-align: center;
+      width: 386px; }
+  .numberPlaceHolderSpan {
+      background-image: url("../images/datacenter/number1.png");
+      background-position: 0px 0px; }
+}
+

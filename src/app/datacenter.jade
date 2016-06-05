@@ -1,0 +1,200 @@
+extends ./layout/_header.jade 
+block content
+  include ./components/_navigation.jade
+  include ./mixins/map-pages.jade
+
+  //变量参数
+  - var page = {pagename:'datacenter'};
+
+  // 小导航
+  div.sub-nav-title 
+    img.home-logo(src="../images/mapcenter/home-logo.png")
+    span 数据中心
+    img.double-arrow(src="../images/mapcenter/double-arrow.png")
+    span.sub-title 个人空间   
+  // 页面banner图
+  div.page-banner
+    img(src="../images/datacenter/datacenter-banner.png")
+    //- div.describe
+    //-   h2 数据中心
+    //-   p 高效的在线制图，可定制的在线制图，专业的在线制图
+    div#yikupulseplaceholder
+      div.pulse(style="left: 420px; top: 50px;")
+      div.pulse(style="left: 410px; top: 60px;")
+      div.pulse(style="left: 328px; top: 45px;")
+      div.pulse(style="left: 323px; top: 57px;")
+      div.pulse(style="left: 302px; top: 69px;")
+      div.pulse(style="left: 292px; top: 55px;")
+      div.pulse(style="left: 352px; top: 95px;")
+      div.pulse(style="left: 312px; top: 95px;")
+      div.pulse(style="left: 392px; top: 95px;")
+      div.pulse(style="left: 332px; top: 125px;")
+      div.pulse(style="left: 378px; top: 163px;")
+      div.pulse(style="left: 266px; top: 176px;")
+      div.pulse(style="left: 284px; top: 146px;")
+      div.pulse(style="left: 224px; top: 160px;")
+      div.pulse(style="left: 248px; top: 146px;")
+      div.pulse(style="left: 318px; top: 193px;")
+      div.pulse(style="left: 208px; top: 164px;")
+    // 大图上的数字
+    #dataResourceTotalDiv
+      p#titleFordataRresourceTotalDiv 数据中心的所有数据（条）
+      #numberDisplayDiv.clearfix
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder1.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder1.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder1.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+        .numberPlaceHolder.numberPlaceHolderSpan
+      #include 其中&nbsp :
+      #nineInfoDiv.clearfix
+        #nineInfoDivOne
+          p
+            | 遥感影像&nbsp 
+            span.nineNumberPlaceHolderSpan
+            | 条
+        #nineInfoDivTwo
+          p
+            | 矢量数据&nbsp 
+            span.nineNumberPlaceHolderSpan
+            | 条
+  // 页面菜单＋搜索
+  div.pagemenu-search
+    include ./components/_pagemenu-search.jade
+
+  // 个人空间
+  section#datacenter-person-space
+    div.sum-info
+      ul
+        li
+          span 共有 <em>112</em> / 120 个文件
+        li
+          img(src="../images/datacenter/zhanghuleixing.png")
+          div.description
+            p 账户类型：企业
+        li
+          img(src="../images/datacenter/cunchuleixing.png")
+          div.description
+            p 存储空间：
+            p 323.8M／无限
+        li.right-info
+          div
+            img(src="../images/datacenter/kuandai.png")
+            span 已使用宽带：<em>0B</em>
+          div
+            img(src="../images/datacenter/zuidawenjiandaxiao.png")
+            span 最大文件大小：<em>15G</em>
+    
+    // 表格菜单
+    div.top-menu
+      ul
+        li
+          img(src="../images/datacenter/xiazai.png")
+          span 下载
+        li
+          img(src="../images/datacenter/shangchuan.png")
+          span 上传
+        //- li
+        //-   img(src="../images/datacenter/xinjian.png")
+        //-   span 新建
+        li
+          img(src="../images/datacenter/shanchu.png")
+          span 删除
+        li
+          img(src="../images/datacenter/shuaxin.png")
+          span 刷新 
+      input(type="checkbox")     
+    
+    // 表格内容
+    table.file-table
+      tbody
+        mixin table-list
+          tr
+            td
+              img(src="../images/datacenter/wenjian0.png")
+            td
+              p.filename CES.Web.dll
+              p.info G-Dragon 于 2016年4月28日更新
+            td
+              p 639KB
+            td
+              input(type="checkbox")
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+        +table-list
+    +map-pages 
+
+  // 工具集
+  section#datacenter-tool-set(style="display:none;")
+    // 左边菜单 
+    - var list = [{name:"数据采集", ename: "shujucaiji", img:"../images/datacenter/shujucaiji.png"},{name:"Geocoding", ename: "Geocoding", img:"../images/datacenter/Geocoding.png"},{name:"ETL", ename: "ETL", img:"../images/datacenter/ETL.png"}]   
+    include ./components/_sidebar.jade
+
+    // 中间工具内容
+    ul.tool-content.shujucaiji(style="display:none;")
+      - var toolList = [{name:"协同标注工具", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/xietongbiaozhu.png"},{name:"轨迹接入", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/guijijieru.png"},{name:"Excel导入导出", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/excel.png"},{name:"Shp导入导出", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/SHP.png"}]
+      include ./components/_datacenter_tool_content.jade
+
+    ul.tool-content.Geocoding(style="display:block;")
+      - var toolList = [{name:"Excel点数据经纬度变shp", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/exceltoshp.png"},{name:"非标准地名地址Geocoding", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/notstanddimingdizhi.png"},{name:"逆编码", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/nibianma.png"},{name:"道路编码", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/daolubianma.png"},{name:"坐标纠偏", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/zuobiaojiupian.png"}]
+      include ./components/_datacenter_tool_content.jade
+    
+    ul.tool-content.ETL(style="display:block;")
+      - var toolList = [{name:"Excel点数据经纬度变shp", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/exceltoshp.png"},{name:"非标准地名地址Geocoding", desc:"应用于交管局道路信息采集、任务分配等众多领域。",img:"../images/datacenter/Geocoding/notstanddimingdizhi.png"}]  
+      include ./components/_datacenter_tool_content.jade
+
+  // 数据集
+  section#datacenter-data-set(style="display:block;")
+    // 左边菜单 
+    - var list = [{name:"新建数据集", ename: "xinjian", img:"../images/datacenter/xinjian.png"},{name:"空间业务信息", ename: "kongjianyewuxinxi", img:"../images/datacenter/kongjianyewuxinxi.png"},{name:"基础地理信息", ename: "jichudili", img:"../images/datacenter/jichudili.png"},{name:"GPS轨迹", ename: "GPS", img:"../images/datacenter/GPS.png"},{name:"地图切片", ename: "dituqiepian", img:"../images/datacenter/dituqiepian.png"},{name:"地名地址", ename: "dimingdizhi", img:"../images/datacenter/dimingdizhi.png"},{name:"外部服务", ename: "waibufuwu", img:"../images/datacenter/waibufuwu.png"}]   
+    include ./components/_sidebar.jade
+
+    // 创建时间
+    div.create-time
+      p 创建时间
+    // 中间工具内容
+    ul.data-content.base-geo-info(style="display:block;")
+      mixin data-box-list
+        li.data-list
+          div.topimg
+            img(src="../images/mapcenter/onemap.png")
+          div.centerinfo 
+            h3 警情基本信息库
+            p 数据集说明：警情录入过程中存在的问题，有针对性地赴各地办案单位进行现场授课。针对该分局正在开展的打击盗窃“两车”专项进行
+          div.bottom
+            section.user
+              span.user-logo
+              span.user-name 张三
+            section.time
+              span.time-info 2016年5月22日 
+      +data-box-list        
+      +data-box-list        
+      +data-box-list        
+      +data-box-list        
+      +data-box-list        
+      +data-box-list        
+          
+
+
+  // 脚注
+  include ./layout/_footer.jade
+
+  script(src='../scripts/datacenter.js')    
+
+
+  
+
+

@@ -1,0 +1,674 @@
+$base_black:#272e40;
+$base_white:#fff;
+$base_gray: #f5f6fa;
+$border_gray: #b2b2b2;
+$back_gray: #edeef2;
+$font_gray: #717171;
+$green: #38a81f;
+$yellow: #f7e916;
+$red: #fb4645;
+$blue: #5ba0ed;
+
+@import "../layout/_header.scss";
+@import "../components/_sidebar.scss";
+@import "../layout/_footer.scss";
+@import "../components/_operaboxlist.scss"; // 单个地图列表样式
+@import "../components/_pagemenu-search.scss";
+
+.opera-banner{
+  width: 1280px;
+  height: 252px;
+  color: $base_white;
+  font-size: 15px;
+  text-align: center;
+  img{
+    width: 75%;
+    height: 252px;
+    float: left;
+  }
+  .opera-statistic{
+    width: 25%;
+    height: 252px;
+    float: left;
+    background-color:$base_black;
+    .banner-title{
+      margin: 10px 20% 0px 20%;
+      height: 30px;
+      line-height: 30px;
+      span{
+        margin: 0px 10%;
+        text-align: center;
+      }
+
+    }
+    .banner-big-statistic{
+      margin: 0px 20px;
+      height: 50px;
+      line-height: 50px;
+      img{
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        float: left;
+        vertical-align: middle;
+      }
+      span{
+        float: left;
+        font-size:50px;
+        text-align: center;
+        vertical-align: middle;
+        margin:0 10px;
+      }
+    }
+    ul.banner-small-statistic{
+      margin: 10px 20px 0px 20px;
+      height: 50px;
+      li{
+        height: 50px;
+        width: 25%;
+        float: left;
+        text-align: center;
+        span{
+          float: left;
+          width: 100%;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+    ul.banner-graph{
+      margin: 0px 20px 10px 20px;
+      height: 90px;
+      overflow: visible;
+      li{
+        height: auto;
+        width: 33%;
+        float: left;
+        text-align: center;
+        span{
+          float: left;
+          width: 100%;
+          line-height: 16px;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+      }
+    }
+
+  }
+}
+
+
+.opera-map {
+  width: 1280px;
+  height: 1200px;
+  // display: none;
+  .right-content-map{
+    float: left;
+    width: 1200px;
+    height: 1000px;
+    .top-info {
+      width: 1170px;
+      margin: 10px 0 10px 30px;
+      height: 38px;
+      font-size: 16px;
+      line-height: 38px;
+      border-bottom: 2px solid $base_black;
+      ul.switch-menu {
+        width: 1170px;
+        height: 38px;
+        li{
+          width: 120px;
+          height: 37px;
+          margin-right: 2px;
+          border: 1px solid $border_gray;
+          border-bottom: none;
+          border-top-right-radius:5px;
+          border-top-left-radius:5px;
+          text-align: center;
+          float: left;
+          background-color: $base_gray;
+          color: $base_black;
+          cursor: pointer;
+        }
+        .clicked{
+          border: 1px solid $base_black;
+          border-bottom: none;
+          background-color: $base_black;
+          color: $base_white;
+        }
+      }
+    }
+    .map-list-div{
+//      display: none;
+      width: 1170px;
+      margin: 10px 0 10px 30px;
+      overflow: hidden;
+      font-size: 15px;
+      ul.map-list {
+        width: 1170px;
+      }
+    }
+    .wfs-list-div{
+      display: none;
+      width: 1170px;
+      height: 1000px;
+      margin: 10px 0 10px 30px;
+      overflow: hidden;
+      font-size: 16px;
+      border: 1px solid $border_gray;
+      ul.wfs-list{
+        width: 15%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        li{
+          line-height: 39px;
+          height: 39px;
+          border-right: 1px solid $back_gray;
+          border-bottom: 1px solid $back_gray;
+          color: $base_black;
+          background-color: $back_gray;
+          text-align: center;
+          cursor: pointer;
+          .rectangle_light{
+            width: 3px;
+            height: 24px;
+            margin: 7px 15px 7px 15px;
+            background-color: $back_gray;
+            vertical-align: middle;
+            float: left;
+          }
+          .clicked{
+            background-color: $red;
+          }
+          span{
+            float: left;
+            vertical-align: middle;
+          }
+        }
+        li:nth-child(even){
+          background-color: $base_white;
+          .rectangle_light{
+            background-color: $base_white;
+          }
+          .clicked{
+            background-color: $red;
+          }
+        }
+        li:last-child{
+          height: 100%;
+        }
+        .clicked{
+          border-right:none;
+        }
+
+      }
+      .wfs-detail{
+        width: 85%;
+        height: 100%;
+        float: left;
+        font-size: 17px;
+        .wfs-title{
+          height: 45px;
+          line-height: 45px;
+          margin: 0px 30px;
+          .rectangle_light{
+            width: 4px;
+            height: 30px;
+            margin: 7px 15px 7px 0px;
+            background-color: $blue;
+            vertical-align: middle;
+            float: left;
+          }
+          span{
+            vertical-align: middle;
+            span{
+              color: $red;
+              font-weight: bold;
+              vertical-align: middle;
+            }
+          }
+
+        }
+        ul.wfs-info{
+          height: 160px;
+          margin: 10px 30px;
+          font-size: 15px;
+          li{
+            width: 300px;
+            line-height: 35px;
+            margin: 0px 30px 5px 20px;
+            float: left;
+          }
+          li:last-child{
+            width: 100%;
+          }
+        }
+        .wfs-visit-graph{
+          height: 360px;
+          margin: 10px 30px 20px 30px;
+          font-size: 15px;
+          border: 1px solid $border_gray;
+          .wfs-graph-name{
+            width: 100%;
+            height: 39px;
+            line-height: 39px;
+            border-bottom: 1px solid $border_gray;
+            background-color: $base_gray;
+            text-align: left;
+            span{
+              margin-left: 20px;
+              vertical-align: middle;
+            }
+          }
+          .wfs-graph-echarts{
+            width: 100%;
+            height: 320px;
+          }
+
+        }
+        .wfs-status-graph{
+          height: 360px;
+          margin: 10px 30px 20px 30px;
+          font-size: 15px;
+          border: 1px solid $border_gray;
+          .wfs-graph-name{
+            width: 100%;
+            height: 39px;
+            line-height: 39px;
+            border-bottom: 1px solid $border_gray;
+            background-color: $base_gray;
+            text-align: left;
+            span{
+              margin-left: 20px;
+              vertical-align: middle;
+            }
+          }
+          .wfs-graph-echarts{
+            width: 100%;
+            height: 320px;
+          }
+        }
+      }
+    }
+  }
+  .right-content-xuniji{
+    display: none;
+    float: left;
+    width: 1200px;
+    height: 1000px;
+    .top-info {
+      width: 1170px;
+      margin: 10px 0 0px 30px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 38px;
+      ul.cross-light{
+        height: 40px;
+        line-height: 40px;
+        float: right;
+        li{
+          float: right;
+          margin-right: 20px;
+          .circle-green{
+            width: 13px;
+            height: 8px;
+            margin: 16px 7px;
+            background-color: $green;
+            float: left;
+            vertical-align: baseline;
+          }
+          .circle-yellow{
+            width: 13px;
+            height: 8px;
+            margin: 16px 7px;
+            background-color: $yellow;
+            float: left;
+            vertical-align: baseline;
+          }
+          .circle-red{
+            width: 13px;
+            height: 8px;
+            margin: 16px 7px;
+            background-color: $red;
+            float: left;
+            vertical-align: baseline;
+          }
+          span{
+            vertical-align: baseline;
+          }
+        }
+      }
+    }
+    .sys-list-div{
+      width: 1170px;
+      margin: 0px 0 10px 30px;
+      overflow: hidden;
+      font-size: 15px;
+      ul.sys-list {
+        width: 1170px;
+      }
+    }
+  }
+  .right-content-system, .right-content-right{
+    display: none;
+    float: left;
+    width: 1200px;
+    height: 1000px;
+  }
+}
+
+.transparent-div{
+  display: none;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: 0;
+  top: 0;
+  background-color: $base_gray;
+  opacity: 0.3;
+
+}
+.alarm-setting{
+  display: none;
+  position: absolute;
+  left: 250px;
+  top: 0px;
+  width: 850px;
+  height: auto;
+  font-size: 15px;
+  text-align: left;
+  color: $base_black;
+  background-color: $base_white;
+  .alarm-title{
+    width: 850px;
+    height: 39px;
+    line-height: 39px;
+    border-bottom: 1px solid $border_gray;
+    span{
+      float: left;
+      margin-left: 10px;
+      vertical-align: middle;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    img{
+      width: 25px;
+      height: 25px;
+      float: right;
+      margin: 7px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+  .alarm-list{
+    display: none;
+    width: 850px;
+    img.process-bar{
+      width: 810px;
+      height: 60px;
+      margin: 10px 20px;
+    }
+    .tips-text{
+      height: 30px;
+      line-height: 30px;
+      padding: 0px 20px;
+      span{
+        vertical-align: middle;
+        span{
+          color: $blue;
+          vertical-align: baseline;
+        }
+      }
+    }
+    table.setting-select{
+      width: 810px;
+      margin: 10px 20px;
+      color: $font_gray;
+      border: 1px solid $back_gray;
+      text-align: center;
+      thead{
+        line-height: 29px;
+        background-color: $back_gray;
+        border-bottom: 1px solid $back_gray;
+        th{
+          text-align: center;
+        }
+        th:nth-child(1){
+          width: 120px;
+        }
+        th:nth-child(2){
+          width: 120px;
+        }
+        th:nth-child(3){
+          width: 410px;
+        }
+        th:nth-child(4){
+          width: 80px;
+        }
+        th:nth-child(5){
+          width: 80px;
+          cursor: pointer;
+        }
+      }
+      tbody{
+        tr{
+          line-height: 49px;
+          border-bottom: 1px solid $back_gray;
+          td{
+            select{
+              width: 100px;
+              height: 30px;
+              margin: 0px 5px;
+              border-radius: 15px;
+              border: 1px solid $back_gray;
+              background-color: $back_gray;
+              outline: none;
+              cursor: pointer;
+              text-align: center;
+              option{
+                border: none;
+                outline: none;
+                line-height: 60px;
+                height: 60px;
+              }
+            }
+            input{
+              width: 100px;
+              height: 30px;
+              margin: 0px 5px;
+              border-radius: 15px;
+              border: 1px solid $back_gray;
+              background-color: $back_gray;
+              padding-left: 14px;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    span.add-setting{
+      line-height: 30px;
+      margin: 0px 20px;
+      color: $blue;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .check-button{
+      height: 40px;
+      line-height: 40px;
+      margin: 0px 20px 10px 20px;
+      input{
+        float: right;
+        width: 80px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+      }
+      .cancel-button{
+        color: $font_gray;
+        background-color: $back_gray;
+
+      }
+      .next-button{
+        color: $base_white;
+        background-color: $blue;
+      }
+
+    }
+
+  }
+  .alarm-people{
+    display: none;
+    width: 850px;
+    img.process-bar{
+      width: 810px;
+      height: 60px;
+      margin: 10px 20px;
+    }
+    .alarm-times{
+      height: 30px;
+      line-height: 30px;
+      padding: 0px 20px;
+      span{
+        vertical-align: middle;
+      }
+      input{
+        width: 50px;
+        vertical-align: middle;
+        outline: none;
+        margin-left: 10px;
+        border: 1px solid $border_gray;
+      }
+    }
+    .alarm-peo{
+      height: 150px;
+      padding: 0px 20px;
+      span{
+        float: left;
+        width: 180px;
+        line-height: 30px;
+        text-align: right;
+        vertical-align: middle;
+      }
+      ul.people-list{
+        float: left;
+        width: 380px;
+        height: 100%;
+        margin-left: 10px;
+        margin-top: 5px;
+        border: 1px solid $border_gray;
+        border-radius: 5px;
+        li{
+          height: 26px;
+          line-height: 26px;
+          width: 100%;
+          float: left;
+          input{
+            width: 14px;
+            height: 14px;
+            margin: 6px;
+            float: left;
+            vertical-align: middle;
+          }
+          span{
+            float: left;
+            text-align: left;
+            vertical-align: middle;
+            font-size: 13px;
+            color: $font_gray;
+          }
+        }
+      }
+    }
+    .check-button{
+      height: 40px;
+      line-height: 40px;
+      margin: 10px 20px;
+      input{
+        float: right;
+        width: 80px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+      }
+      .cancel-button{
+        color: $font_gray;
+        background-color: $back_gray;
+
+      }
+      .next-button{
+        color: $base_white;
+        background-color: $blue;
+      }
+      .pre-button{
+        color: $font_gray;
+        background-color: $back_gray;
+
+      }
+
+    }
+  }
+  .alarm-success{
+    display: none;
+    width: 850px;
+    img.process-bar{
+      width: 810px;
+      height: 60px;
+      margin: 10px 20px;
+    }
+    .success-text{
+      width: 810px;
+      margin: 10px 20px;
+      padding: 30px 0px;
+      img.success-bar{
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px 10px 220px;
+        vertical-align: middle;
+      }
+      span{
+        height: 30px;
+        line-height: 30px;
+        font-size: 17px;
+        vertical-align: middle;
+        span{
+          color: $blue;
+          vertical-align: baseline;
+        }
+      }
+
+    }
+    .check-button{
+      height: 40px;
+      line-height: 40px;
+      margin: 10px 20px;
+      input{
+        float: right;
+        width: 80px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+      }
+      .close-button{
+        color: $base_white;
+        background-color: $blue;
+      }
+    }
+  }
+
+}

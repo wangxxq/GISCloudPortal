@@ -1,0 +1,255 @@
+extends ./layout/_header.jade
+block content
+    include ./mixins/opera-box-list.jade
+    include ./mixins/map-pages.jade
+    //变量参数
+    - var page = {pagename:'operacenter'};
+
+    //页面大导航
+    include ./components/_navigation.jade
+
+    // 小导航
+    div.sub-nav-title
+        img.home-logo(src="../images/mapcenter/home-logo.png")
+        span 运维中心
+        img.double-arrow(src="../images/mapcenter/double-arrow.png")
+        span 地图管理
+    // 页面banner图
+    div.opera-banner
+        img(src="../images/operacenter/banner.png")
+        div.opera-statistic
+            div.banner-title
+                span 服务数
+                span 虚拟机
+            div.banner-big-statistic
+                img(src="../images/operacenter/banner01.png")
+                span 90/80
+                img(src="../images/operacenter/banner02.png")
+            ul.banner-small-statistic
+                li
+                    span 地图服务
+                    span 70
+                li
+                    span 基础服务
+                    span 70
+                li
+                    span 服务种类
+                    span 70
+                li
+                    span 在线人数
+                    span 70
+            ul.banner-graph
+                li
+                    div#indicatorContainer
+                    span CPU
+                li
+                    div#indicatorContainer1
+                    span 硬盘
+                li
+                    div#indicatorContainer2
+                    span 内存
+    //搜索框
+    include ./components/_pagemenu-search.jade
+
+    // 页面内容开始
+    div.opera-map
+        // 左边菜单 
+        - var list = [{name:"地图管理", ename: "dituguanli", img:"../images/operacenter/dituguanli0.png"},{name:"虚拟机管理", ename: "xunijiguanli", img:"../images/operacenter/xunijiguanli.png"},{name:"权限管理", ename: "quanxianguanli", img:"../images/operacenter/quanxianguanli.png"},{name:"系统管理", ename: "xitongguanli", img:"../images/operacenter/xitongguanli.png"}]
+        include ./components/_sidebar.jade
+        // 右边内容－地图管理
+        div.right-content-map
+            // 菜单
+            div.top-info
+                ul.switch-menu
+                    li#index-menu.clicked 地图列表
+            //地图列表
+            div.map-list-div
+                ul.map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                    +opera-map-list
+                +map-pages
+
+            div.wfs-list-div
+                ul.wfs-list
+                    li.clicked
+                        div.rectangle_light.clicked
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                        div.rectangle_light
+                        span WFS-23234
+                    li
+                div.wfs-detail
+                    div.wfs-title
+                        div.rectangle_light
+                        span WFS-23234
+                            span （错误警报）
+                    ul.wfs-info
+                        li
+                            span 服务名称：
+                            span WFS
+                        li
+                            span 服务类型：
+                            span 基础地图服务
+                        li
+                            span 创建时间：
+                            span 2016-05-05
+                        li
+                            span 服务状态：
+                            span 正常
+                        li
+                            span 请求次数：
+                            span 5
+                        li
+                            span 平均响应时间：
+                            span 0.2
+                        li
+                            span 服务地址：
+                            span http://73.125.98.106//xxxxxxx
+                    div.wfs-visit-graph
+                        div.wfs-graph-name
+                            span 访问量
+                        div.wfs-graph-echarts
+                            
+                    div.wfs-status-graph
+                        div.wfs-graph-name
+                            span 平均响应时间
+                        div.wfs-graph-echarts
+                            
+        
+        // 右边内容-虚拟机管理
+        div.right-content-xuniji
+            div.top-info
+                ul.cross-light
+                    li
+                        div.circle-red
+                        span 错误&nbsp
+                        span 0
+                    li
+                        div.circle-yellow
+                        span 危险&nbsp
+                        span 0
+                    li
+                        div.circle-green
+                        span 正常&nbsp
+                        span 5
+            div.sys-list-div
+                ul.sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                    +opera-sys-list
+                +map-pages
+        
+        // 右边内容-权限管理
+        div.right-content-right
+        // 右边内容-系统管理
+        div.right-content-system
+
+    div.transparent-div
+    div.alarm-setting
+        div.alarm-title
+            span 报警规则设置
+            img(src="../images/operacenter/close.png")
+        div.alarm-list
+            img.process-bar(src="../images/operacenter/alarm001.png")
+            div.tips-text
+                span 您正在对&nbsp
+                    span 事故地图
+                span &nbsp进行报警规则设置
+            table.setting-select
+                thead
+                    tr
+                        th 监控项
+                        th 统计周期
+                        th 统计方法
+                        th 字段
+                        th 操作
+                tbody
+                    tr
+                        td
+                            select
+                                option 请选择
+                                option 平均响应时间
+                        td
+                            select
+                                option 五分钟
+                        td
+                            select
+                                option 平均值
+                            select
+                                option >
+                            span 阈值
+                            input(type='text')
+                        td -
+                        td 删除
+            span.add-setting +添加报警规则
+            div.check-button
+                input.cancel-button(type='button',value='取消')
+                input.next-button(type='button',value='下一步')
+        div.alarm-people
+            img.process-bar(src="../images/operacenter/alarm002.png")
+            div.alarm-times
+                span 连续几次超过阈值后报警：
+                input(type='number',min="1",value="1")
+            div.alarm-peo
+                span 联系人通知：
+                ul.people-list
+                    li
+                        input(type='checkbox')
+                        span 云管理员
+                    li
+                        input(type='checkbox')
+                        span 地图管理员
+            div.check-button
+                input.cancel-button(type='button',value='取消')
+                input.next-button(type='button',value='确定')
+                input.pre-button(type='button',value='上一步')
+        div.alarm-success
+            img.process-bar(src="../images/operacenter/alarm003.png")
+            div.success-text
+                img.success-bar(src="../images/operacenter/success.png")
+                span 您已完成对&nbsp
+                    span 事故地图
+                span &nbsp的报警规则设置
+            div.check-button
+                input.close-button(type='button',value='关闭')
+
+    // 脚注
+    include ./layout/_footer.jade
+
+    script(src='../scripts/operacenter.js')
+    script(src='../scripts/radialIndicator.js')
+

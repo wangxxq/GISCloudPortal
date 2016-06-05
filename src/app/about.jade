@@ -1,0 +1,51 @@
+extends ./layout/_header.jade
+
+block content
+  include ./components/_navigation.jade
+  div#aboutpage
+    // 小导航
+    div.sub-nav-title 
+      img.home-logo(src="../images/mapcenter/home-logo.png")
+      span 首页
+      img.double-arrow(src="../images/mapcenter/double-arrow.png")
+      span.sub-title 联系我们   
+    // 页面banner图
+    div.page-banner
+      img(src="../images/about/banner.png") 
+
+    section.left
+      div.connetus
+        h5 联系我们
+        div.company
+          div.introcomp
+            h4 联图时空信息科技有限公司
+            p 地址：武汉市东湖新技术开发区珞瑜东路4号慧谷时空1栋19层
+            p 邮编：430223
+            p 总机：
+            p 分机：
+            p 邮箱：techsupport@linkingtomap.com
+          div.paracomp
+            h4 公司情况简介
+            p 武汉联图时空信息科技有限公司是一家时空大数据应用系统开发企业，公司位于武汉东湖高新技术开发区。公司以自主创新技术为核心，提供时空数据采集处理、关联分析与集成应用的系统开发与服务。
+      div.companymap
+        img(src="../images/about/map.png")
+      div.address
+        div.car
+          img(src="../images/about/car.png")
+          p 武汉联图时空信息科技有限公司是一家时空大数据应用系统开发企业，公司位于武汉东湖高新技术开发区。公司以自主创新技术为核心，提供时空数据采集处理、关联分析与集成应用的系统开发与服务。
+        div.bus
+          img(src="../images/about/bus.png")
+          p 武汉联图时空信息科技有限公司是一家时空大数据应用系统开发企业，公司位于武汉东湖高新技术开发区。公司以自主创新技术为核心，提供时空数据采集处理、关联分析与集成应用的系统开发与服务。
+    section.right
+      img.jigsaw(src="../images/about/jigsaw.png")
+      div.connectus
+        img.connect(src="../images/about/connectus.png")
+        div.content
+          h4 0000-2234556
+          p 联系我们
+          p CONNECT US
+      img.qrcode(src="../images/about/qrcode.png")    
+
+    // 脚注
+    include ./layout/_bigfooter.jade
+  script(src="../scripts/about.js")

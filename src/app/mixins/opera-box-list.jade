@@ -1,0 +1,55 @@
+mixin opera-map-list
+    li.opera-map-list
+        div.map-status-menu
+            span.clicked 访问量
+            span 运行状态
+            img(src="../images/operacenter/setting.png")
+        div.map-graph-echarts
+        div.map-data
+            div.visitnum
+                img(src="../images/operacenter/visitnum.png")
+                span 访问量: 120
+            div.cross-light
+                div.circle-green
+                span 正常
+        h2 事故地图(查看)
+        p 本地图的服务个数为8，截止目前，地图访问总量为120，运行状态正常。
+        div.map-info
+            div.map-name
+                img(src="../images/operacenter/creator.png")
+                span 张三
+            span.map-date 2016-04-18
+
+mixin opera-sys-list
+    li.opera-sys-list
+        ul.sys-status-menu
+            li.clicked
+                span CPU使用率
+            li
+                span 内存使用率
+            li
+                span 磁盘使用率
+        div.sys-data
+            div.idnumber
+                span ID:
+                span 101010
+            img(src="../images/operacenter/setting.png")
+        div.xuniji-graph-echarts
+        div.sys-info
+            span 内网IP:
+            span 134.54.19.63
+            span 外网IP:
+            span 134.54.19.63
+        ul.cross-light
+            li
+                div.circle-green
+                span 正常服务&nbsp
+                span 5
+            li
+                div.circle-yellow
+                span 危险服务&nbsp
+                span 0
+            li
+                div.circle-red
+                span 错误服务&nbsp
+                span 0

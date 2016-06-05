@@ -1,0 +1,8 @@
+// 左边菜单  
+div.left-menu  
+  each item in list 
+     
+    div.left-one-menu(id=item.ename)
+      img(src=item.img class= item.ename + "-img") 
+      h4= item.name
+

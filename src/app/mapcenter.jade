@@ -1,0 +1,131 @@
+extends ./layout/_header.jade
+
+block content
+  include ./mixins/map-box-list.jade
+  include ./mixins/map-pages.jade
+  include ./components/_navigation.jade
+  
+  //变量参数
+  - var page = {pagename:'mapcenter'};
+
+  // 小导航
+  div.sub-nav-title 
+    img.home-logo(src="../images/mapcenter/home-logo.png")
+    span 地图中心
+    img.double-arrow(src="../images/mapcenter/double-arrow.png")
+    span.sub-title 地图管理   
+  // 页面banner图
+  div.page-banner
+    img(src="../images/mapcenter/mapcenter-banner.png")
+    div.describe
+      h2 地图中心
+      p 高效的在线制图，可定制的在线制图，专业的在线制图  
+
+  include ./components/_pagemenu-search.jade
+
+
+  // 地图工厂内容    
+  div.map-factory#mapcenter-mapfactory
+    mixin map-factory-mymap
+      // 左边菜单 
+      - var list = [{name:"地图模版", ename: "mubanzhitu", img:"../images/mapcenter/mubanzhitu.png"},{name:"高级制图", ename: "gaojizhitu", img:"../images/mapcenter/gaojizhitu.png"}]
+      include ./components/_sidebar.jade
+        
+      // 右边内容－模版制作
+      div.right-content-template 
+        // 菜单
+        div.top-info
+          div.switch-menu
+            span#mapservice-tmpl.clickfirst 地图服务模版
+            span#staticmap-tmpl 静态瓦片模板
+          div.sort-menu
+            span 创建人员
+            span 创建时间
+        // 地图模版
+        div.map-template
+          div.template-logo
+            img(src="../images/mapcenter/ditumuban.png")    
+            span 地图模版
+          ul.map-box
+            +map-box-list  
+            +map-box-list
+            +map-box-list
+            li.map-box-list
+              img.onemap(src="../images/mapcenter/addmap.png")
+              p 高效的在线制图，可定制的在线制图，专业的在线制图
+          +map-pages
+        // 正在制作的地图
+        div.map-making
+          div.template-logo
+            img(src="../images/mapcenter/ditumuban.png")    
+            span 正在制作的地图
+          ul.map-box
+            +map-box-list  
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+          +map-pages 
+
+      // 右边内容－高级制图
+      div.right-content-highlevel 
+        div.map-choose-service
+          div.mapservice
+            img(src="../images/mapcenter/highlever-mapservice.png")
+            span 地图服务
+          div.dataset
+            img(src="../images/mapcenter/highlever-dataset.png")
+            span 瓦片数据集
+        // 正在制作的地图
+        div.map-making
+          div.template-logo
+            img(src="../images/mapcenter/ditumuban.png")    
+            span 正在制作的地图
+          ul.map-box
+            +map-box-list  
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+            +map-box-list
+          +map-pages 
+    +map-factory-mymap
+
+  // 我的地图内容
+  div.map-mymap#mapcenter-mymap
+    +map-factory-mymap
+  // 最新地图  
+  div.map-newmap#mapcenter-newmap
+    // 左边菜单 
+    - var list = []
+    include ./components/_sidebar.jade
+    div.sort-menu-box
+      div.sort-menu
+        span 创建人员
+        span 创建时间
+    ul.map-box
+      +map-box-list  
+      +map-box-list
+      +map-box-list
+      +map-box-list
+      +map-box-list
+      +map-box-list
+      +map-box-list
+      +map-box-list
+    +map-pages 
+
+  // 脚注
+  include ./layout/_footer.jade
+
+  script(src='../scripts/mapcenter.js')      
+  
+
+            
+
+
+
