@@ -1,0 +1,94 @@
+#new03.onepage
+	include components/dataset-build.jade
+	include components/common-mixin.jade
+	+dataset-build
+	div.section-container
+		+common-mixin("创建数据表")
+		div.section-item
+			img(src="../images/datacenter/table_name.png")
+			span 表名：
+			input(type="text")
+		input.section-button(type="button" value="数据表权限设置")
+		input.author-default(type="text" value="（默认继承数据集权限）" readonly)
+	div.attribute-build
+		div.attribute-table
+			table.basic-table
+				thead
+					tr
+						th 名称
+						th 类型
+						th 字段名
+						th 可否为空
+						th 默认值
+						th 自增长
+						th 主键
+						th 单位
+				tbody
+					tr
+						td data.tx.snap
+						td hdfs目录
+						td 无
+						td
+							select
+								option 否
+								option 否
+						td 12345
+						td
+							select
+								option 否
+								option 否
+						td
+							select
+								option 否
+								option 否
+						td 无
+					tr
+						td data.tx.snap
+						td hdfs目录
+						td 无
+						td
+							select
+								option 否
+								option 否
+						td 12345
+						td
+							select
+								option 否
+								option 否
+						td
+							select
+								option 否
+								option 否
+						td 无     					      
+		div.attribute-button
+			img(src="../images/datacenter/add0.png")
+			img(src="../images/datacenter/minus0.png")
+		div.clear
+	input.section-button.add-button(type="button" value="增加数据表") 
+	div.param-setting
+		div.section-title(style="width: 165px")
+			img(src="../images/datacenter/param_set.png")
+			span 高级参数设置
+		div.param-item
+			img(src="../images/datacenter/trian_bottom.png")
+			span Phoenix参数设置
+			table.basic-table
+				thead
+					tr
+						th 参数设置
+						th 参数设置
+						th 参数设置
+						th 参数设置
+						th 参数设置
+				tbody
+					- var list = ["data.tx.snap","hdfs目录","无","否","否"];
+					- for(var i = 0; i < 5; i++){
+					tr
+						- for(var j = 0; j < list.length; j++){
+							td= list[j]
+						-}
+					-}
+		div.param-item
+			img(src="../images/datacenter/trian_right.png")
+			span HBase参数设置
+	input.build-button(type="button" value="创建")

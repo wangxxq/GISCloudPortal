@@ -1,0 +1,16 @@
+#new02.onepage
+	include components/common-mixin.jade
+	div.section-container
+		+common-mixin("创建数据集")
+		div.section-item
+			img(src="../images/datacenter/style.png")
+			span.item 类型：
+				select
+					option 空间业务信息（从标准导入）
+					option ...
+			img(src="../images/datacenter/criterion.png")
+			span.item 标准：
+				select
+					option 公安部标准1
+					option ...
+		input.section-button(type="button" value="数据集权限设置")
