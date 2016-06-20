@@ -1,0 +1,100 @@
+/* 
+	去除每个按钮的轮廓阴影
+	 */
+	.delete-shadow {
+		border: none;
+	}
+	/* 
+	表格的通用样式
+
+	 */
+	table.basic-table {
+		tr,td,th {
+			text-align: center;
+		}
+		th {
+			background-color: #fff;
+		}
+		tr {
+			line-height: 40px;
+            background-color: $module-bgd;
+			vertical-align: middle;
+			border-bottom: 4px solid #fff;
+
+		}
+	}
+	.section-container {
+		box-sizing: border-box;
+		height: 335px;
+		margin-bottom: 20px;
+		padding: 20px 38px;
+		background-color: $module-bgd;
+		border-radius: 5px;
+	}
+	.section-title {	
+			width: 140px;
+			height: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			margin-bottom: 30px;
+			padding: 2px;
+			border-bottom: 4px solid $underline;
+			img {
+				margin-right: 10px;
+				vertical-align: middle;
+			}
+			span {
+				vertical-align: middle;
+				letter-spacing: 2px;
+			}
+		}
+	.section-item {
+		margin-bottom: 20px;	
+		img {
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		span {
+			font-size: 16px;
+			vertical-align: middle;
+			display: inline-block;
+			letter-spacing: 2px;
+		}
+		input {
+			width: 300px;
+			font-size: 14px;
+			border: 1px solid #000;
+		}
+		textarea {
+			height: 65px;
+			width: 600px;
+			font-size: 14px;
+			margin-left: 3px;
+			border: 1px solid #000;
+			vertical-align: middle;
+		}
+		select {
+			width: 300px;
+			font-size: 14px;
+			margin-left: 2px;
+			border: 1px solid #000;
+		}
+	}
+	.section-button {
+		@extend .delete-shadow;
+		font-family: $heiti;
+		font-size: 100%;
+		width: 157px;
+		height: 40px;
+		border-radius: 5px;
+		background-color: $btn-bgd;
+		text-align: center;
+		cursor: pointer;
+	}
+	input.author-default {
+		font-family: $heiti;
+		color: #bebfc1;
+		border: none;  
+		background-color: transparent; 
+	}
