@@ -255,7 +255,9 @@
     overflow: hidden;
     @import "../newdataset/newdataset.scss";
     .onepage{
-      width: 100%;
+      margin: 25px 0 0 20px;
+      width: 1180px;
+      font: 16px/16px arial, SimHei;
       height: 100%;
       display: none;
     }
