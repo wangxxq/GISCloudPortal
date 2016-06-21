@@ -17,7 +17,7 @@
 		}
 		tr {
 			line-height: 40px;
-            background-color: $module-bgd;
+      background-color: $module-bgd;
 			vertical-align: middle;
 			border-bottom: 4px solid #fff;
 
@@ -97,4 +97,13 @@
 		color: #bebfc1;
 		border: none;  
 		background-color: transparent; 
+	}
+	.vm-section {
+		padding: 20px 38px;
+		.section-item {
+			input {
+				width: 150px;
+				margin: 0px 20px 0px 10px;
+			}
+		}
 	}
