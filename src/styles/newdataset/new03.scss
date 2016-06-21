@@ -31,6 +31,7 @@
 	}	
 	.param-setting {
 		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
 		padding: 20px 38px;		
 		.param-item {
 			margin-left: 15px;
@@ -49,7 +50,7 @@
 		@extend .delete-shadow;
 		@extend .section-button;
 		position: relative;
-		left: 1000px;
+		left: 900px;
 		margin-bottom: 40px;
 		width: 100px;		
 	}

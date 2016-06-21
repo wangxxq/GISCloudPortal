@@ -1,6 +1,7 @@
 #new03.onepage
 	include components/dataset-build.jade
 	include components/common-mixin.jade
+	include components/virtual-machine.jade
 	+dataset-build
 	div.section-container
 		+common-mixin("创建数据表")
@@ -91,4 +92,5 @@
 		div.param-item
 			img(src="../images/datacenter/trian_right.png")
 			span HBase参数设置
-	input.build-button(type="button" value="创建")
+		input.build-button(type="button" value="创建")
+	+virtual-machine

@@ -1,2 +1,12 @@
 #new04.onepage
-  h1 sfsfd
+  include components/dataset-build.jade
+  include components/common-mixin.jade
+  +dataset-build
+  div.section-container
+    +common-mixin("创建数据表")
+    div.section-item
+      img(src="../images/datacenter/table_name.png")
+      span 表名：
+      input(type="text")
+    input.section-button(type="button" value="数据表权限设置")
+    input.author-default(type="text" value="（默认继承数据集权限）" readonly)
