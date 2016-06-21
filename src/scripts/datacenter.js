@@ -142,6 +142,21 @@ Datacenter.initMenu = function(){
     Datacenter.switchSubMenu('#datacenter-data-set','waibufuwu');
   })
 
+  // 临时使用，用来测试新建数据集
+  $('#newdatasetTempButton').click(function(){
+    var num = parseInt($('#newdatasetTempPage').val());
+    if(num > 1 && num < 41){
+      $('.rightcontent .onepage').hide();
+      if(num < 10){
+        $('#new0' + num).show(200);
+      }else{
+        $('#new' + num).show(200);
+      }
+    }else{
+      alert('请重新输入')
+    }
+  })
+
 }
 
 

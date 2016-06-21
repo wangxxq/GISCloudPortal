@@ -161,32 +161,73 @@ block content
     // 左边菜单 
     - var list = [{name:"新建数据集", ename: "xinjian", img:"../images/datacenter/xinjian.png"},{name:"空间业务信息", ename: "kongjianyewuxinxi", img:"../images/datacenter/kongjianyewuxinxi.png"},{name:"基础地理信息", ename: "jichudili", img:"../images/datacenter/jichudili.png"},{name:"GPS轨迹", ename: "GPS", img:"../images/datacenter/GPS.png"},{name:"地图切片", ename: "dituqiepian", img:"../images/datacenter/dituqiepian.png"},{name:"地名地址", ename: "dimingdizhi", img:"../images/datacenter/dimingdizhi.png"},{name:"外部服务", ename: "waibufuwu", img:"../images/datacenter/waibufuwu.png"}]   
     include ./components/_sidebar.jade
+    
+    div#jichudili.rightcontent
+      // 创建时间
+      div.create-time
+        p 创建时间
+      // 中间工具内容
+      ul.data-content.base-geo-info(style="display:block;")
+        mixin data-box-list
+          li.data-list
+            div.topimg
+              img(src="../images/mapcenter/onemap.png")
+            div.centerinfo 
+              h3 警情基本信息库
+              p 数据集说明：警情录入过程中存在的问题，有针对性地赴各地办案单位进行现场授课。针对该分局正在开展的打击盗窃“两车”专项进行
+            div.bottom
+              section.user
+                span.user-logo
+                span.user-name 张三
+              section.time
+                span.time-info 2016年5月22日 
+        +data-box-list        
+        +data-box-list        
+        +data-box-list        
+        +data-box-list        
+        +data-box-list        
+        +data-box-list        
+    div#xinjiandataset.rightcontent
+      include ./newdataset/new02.jade
+      include ./newdataset/new03.jade
+      include ./newdataset/new04.jade
+      include ./newdataset/new05.jade
+      include ./newdataset/new06.jade
+      include ./newdataset/new07.jade
+      include ./newdataset/new08.jade
+      include ./newdataset/new09.jade
+      include ./newdataset/new10.jade
+      include ./newdataset/new11.jade
+      include ./newdataset/new12.jade
+      include ./newdataset/new13.jade
+      include ./newdataset/new14.jade
+      include ./newdataset/new15.jade
+      include ./newdataset/new16.jade
+      include ./newdataset/new17.jade
+      include ./newdataset/new18.jade
+      include ./newdataset/new19.jade
+      include ./newdataset/new20.jade
+      include ./newdataset/new21.jade
+      include ./newdataset/new22.jade
+      include ./newdataset/new23.jade
+      include ./newdataset/new24.jade
+      include ./newdataset/new25.jade
+      include ./newdataset/new26.jade
+      include ./newdataset/new27.jade
+      include ./newdataset/new28.jade
+      include ./newdataset/new29.jade
+      include ./newdataset/new30.jade
+      include ./newdataset/new31.jade
+      include ./newdataset/new32.jade
+      include ./newdataset/new33.jade
+      include ./newdataset/new34.jade
+      include ./newdataset/new35.jade
+      include ./newdataset/new36.jade
+      include ./newdataset/new37.jade
+      include ./newdataset/new38.jade
+      include ./newdataset/new39.jade
+      include ./newdataset/new40.jade
 
-    // 创建时间
-    div.create-time
-      p 创建时间
-    // 中间工具内容
-    ul.data-content.base-geo-info(style="display:block;")
-      mixin data-box-list
-        li.data-list
-          div.topimg
-            img(src="../images/mapcenter/onemap.png")
-          div.centerinfo 
-            h3 警情基本信息库
-            p 数据集说明：警情录入过程中存在的问题，有针对性地赴各地办案单位进行现场授课。针对该分局正在开展的打击盗窃“两车”专项进行
-          div.bottom
-            section.user
-              span.user-logo
-              span.user-name 张三
-            section.time
-              span.time-info 2016年5月22日 
-      +data-box-list        
-      +data-box-list        
-      +data-box-list        
-      +data-box-list        
-      +data-box-list        
-      +data-box-list        
-          
 
 
   // 脚注
